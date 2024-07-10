@@ -5,10 +5,9 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('mahasiswas', 'MahasiswaController::index');
-$routes->get('mahasiswas/create', 'MahasiswaController::create');
-$routes->post('mahasiswas/store', 'MahasiswaController::store');
-$routes->get('mahasiswas/edit/(:segment)', 'MahasiswaController::edit/$1');
-$routes->post('mahasiswas/update/(:segment)', 'MahasiswaController::update/$1');
-$routes->get('mahasiswas/delete/(:segment)', 'MahasiswaController::delete/$1');
+$routes->get('/', 'Home::index');
 
+$routes->get('siswa', 'SiswaController::index');
+$routes->post('siswa/simpan', 'SiswaController::simpan');
+$routes->get('siswa/hapus/(:segment)', 'SiswaController::hapus/$1');
+$routes->get('siswa/edit/(:segment)', 'SiswaController::edit/$1');
